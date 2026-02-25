@@ -1,0 +1,29 @@
+{
+  "name": "sainsburys-playwright",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "npx playwright test",
+    "test:search": "npx playwright test tests/search.spec.ts --project='Google Chrome' --headed",
+    "test:random": "npx playwright test tests/random.spec.ts --project='Google Chrome' --headed",
+    "test:ui": "npx playwright test --ui",
+    "test:debug": "npx playwright test --debug",
+    "codegen": "npx playwright codegen --browser=chrome https://www.sainsburys.co.uk/"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@playwright/test": "^1.58.2",
+    "@types/node": "^25.3.0"
+  },
+  "dependencies": {
+    "playwright-extra": "^4.3.6",
+    "puppeteer-extra-plugin-stealth": "^2.11.2"
+  }
+}
